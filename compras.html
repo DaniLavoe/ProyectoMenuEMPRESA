@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Boletos</title>
+</head>
+<body style="background-image: url('fondo.jpg'); background-size: cover; background-position: center; background-attachment: fixed; font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center;">
+
+    <header style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+        <img src="tica.jpg" width="300" height="188" style="display: block; margin: 0 auto;">
+        <h1 style="color: white;">Compra de Boletos de Autobús</h1>
+    </header>
+
+    <main style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; margin: 50px auto; max-width: 600px; border-radius: 10px;">
+        <h2>Selecciona tu viaje</h2>
+        <form action="procesar_compra.php" method="post">
+            <label for="origen">Origen:</label><br>
+            <select id="origen" name="origen" style="width: 100%; padding: 8px;">
+                <option value="guatemala">Guatemala</option>
+                <option value="san_salvador">San Salvador</option>
+                <option value="managua">Managua</option>
+                <option value="san_jose">San José</option>
+            </select><br><br>
+
+            <label for="destino">Destino:</label><br>
+            <select id="destino" name="destino" style="width: 100%; padding: 8px;">
+                <option value="san_salvador">San Salvador</option>
+                <option value="managua">Managua</option>
+                <option value="san_jose">San José</option>
+                <option value="panama">Panamá</option>
+            </select><br><br>
+
+            <label for="fecha">Fecha de viaje:</label><br>
+            <input type="date" id="fecha" name="fecha" style="width: 100%; padding: 8px;"><br><br>
+
+            <label for="cantidad">Cantidad de boletos:</label><br>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="10" style="width: 100%; padding: 8px;"><br><br>
+
+            <button type="submit" style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;">Comprar Ahora</button>
+        </form>
+    </main>
+
+</body>
+</html>
