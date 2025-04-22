@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Contactos - TICA BUS</title>
+    <style>
+     
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+     
+        header {
+            background-color: #333;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+   
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+     
+        main {
+            background-color: white;
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 90%;
+            border-radius: 10px;
+        }
+
+        .contacto {
+            background-color: #eee;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 5px;
+            max-width: 600px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+       
+        @media (max-width: 600px) {
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            .contacto {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Lista de Contactos - TICA BUS</h1>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="informacion.html">Información General</a></li>
+                <li><a href="compras.html">Compra en Línea</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contactos de la Empresa</h2>
+
+        <div class="contacto">
+            <h3>Oficina Central</h3>
+            <p>Teléfono: +502 1234-5678</p>
+            <p>Email: central@ticabus.com</p>
+        </div>
+
+        <div class="contacto">
+            <h3>Atención al Cliente</h3>
+            <p>Teléfono: +502 8765-4321</p>
+            <p>Email: clientes@ticabus.com</p>
+        </div>
+
+        <div class="contacto">
+            <h3>Soporte Técnico</h3>
+            <p>Teléfono: +502 9876-5432</p>
+            <p>Email: soporte@ticabus.com</p>
+        </div>
+
+    </main>
+
+</body>
+</html>
