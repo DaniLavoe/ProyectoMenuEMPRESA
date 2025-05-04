@@ -4,47 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compra de Boletos</title>
-</head>
-    <body style="background-image: url('fondoinicio.jpg'); background-size: cover; background-position: center; background-attachment: fixed; font-family: Arial, sans-serif; margin: 0; padding: 0;">
-                <li style="display: inline; margin: 0 15px;"><a href="inicio.html" style="text-decoration: none; color: white; font-size: 18px;">Inicio</a></li>
-                <li style="display: inline; margin: 0 15px;"><a href="informacion.html" style="text-decoration: none; color: red; font-size: 18px;">Información General</a></li>
-                <li style="display: inline; margin: 0 15px;"><a href="contacto.html" style="text-decoration: none; color: white; font-size: 18px;">Contáctanos</a></li>
-        <li style="display: inline; margin: 0 15px;"><a href="historia.html" style="text-decoration: none; color: red; font-size: 18px;">Historia</a></li>
-    <body style="background-image: url('fondo.jpg'); background-size: cover; background-position: center; background-attachment: fixed; font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center;">
+    <style>
+        body {
+            background-image: url('fondoinicio.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-    <header style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        /* Alternando colores */
+        nav ul li:nth-child(odd) a {
+            background-color: blue;
+        }
+
+        nav ul li:nth-child(even) a {
+            background-color: red;
+        }
+
+        /* Efecto hover */
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+
+        main {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label, select, input, button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
         <img src="tica.jpg" width="300" height="188" style="display: block; margin: 0 auto;">
         <h1 style="color: white;">Compra de Boletos TICA BUS</h1>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="informacion.html">Información General</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+                <li><a href="historia.html">Historia</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; margin: 50px auto; max-width: 600px; border-radius: 10px;">
+    <main>
         <h2>Selecciona tu viaje</h2>
-            <label for="origen">Origen:</label><br>
-            <select id="origen" name="origen" style="width: 100%; padding: 8px;">
-                <option value="guatemala">Guatemala</option>
-                <option value="san_salvador">San Salvador</option>
-                <option value="managua">Managua</option>
-                <option value="san_jose">San José</option>
-            </select><br><br>
+        <label for="origen">Origen:</label>
+        <select id="origen" name="origen">
+            <option value="guatemala">Guatemala</option>
+            <option value="san_salvador">San Salvador</option>
+            <option value="managua">Managua</option>
+            <option value="san_jose">San José</option>
+            <option value="chiapas">Chiapas</option>
+        </select>
 
-            <label for="destino">Destino:</label><br>
-            <select id="destino" name="destino" style="width: 100%; padding: 8px;">
-                <option value="san_salvador">San Salvador</option>
-                <option value="managua">Managua</option>
-                <option value="san_jose">San José</option>
-                <option value="panama">Panamá</option>
-            </select><br><br>
+        <label for="destino">Destino:</label>
+        <select id="destino" name="destino">
+            <option value="san_salvador">San Salvador</option>
+            <option value="managua">Managua</option>
+            <option value="san_jose">San José</option>
+            <option value="panama">Panamá</option>
+            <option value="chiapas">Chiapas</option>
+        </select>
 
-            <label for="fecha">Fecha de viaje:</label><br>
-            <input type="date" id="fecha" name="fecha" style="width: 100%; padding: 8px;"><br><br>
+        <label for="fecha">Fecha de viaje:</label>
+        <input type="date" id="fecha" name="fecha">
 
-            <label for="cantidad">Cantidad de boletos:</label><br>
-            <input type="number" id="cantidad" name="cantidad" min="1" max="10" style="width: 100%; padding: 8px;"><br><br>
+        <label for="cantidad">Cantidad de boletos:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" max="10">
 
-          <button type="button" style="background-color: green; color: white; padding: 10px 20px; border: none; cursor: pointer;" onclick="window.open('boleto.jpeg', '_self')">Comprar Ahora</button>
-
-
-        </form>
+        <button type="button" onclick="window.open('boleto.jpeg', '_self')">Comprar Ahora</button>
     </main>
 
 </body>
