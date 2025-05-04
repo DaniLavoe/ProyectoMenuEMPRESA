@@ -4,16 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Información General</title>
-    <li style="display: inline; margin: 0 15px;"><a href="inicio.html" style="text-decoration: none; color: white; font-size: 18px;">Inicio</a></li>
-                <li style="display: inline; margin: 0 15px;"><a href="compras.html" style="text-decoration: none; color: red; font-size: 18px;">Compra en Linea</a></li>
-                <li style="display: inline; margin: 0 15px;"><a href="contacto.html" style="text-decoration: none; color: white; font-size: 18px;">Contactanos</a></li>
-    <li style="display: inline; margin: 0 15px;"><a href="historia.html" style="text-decoration: none; color: red; font-size: 18px;">Historia</a></li>
-    <body style="background-image: url('fondoinicio.jpg'); background-size: cover; background-position: center; background-attachment: fixed; font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center;">
-
-    <header style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
-        <img src="tica.jpg" width="300" height="188" style="display: block; margin: 0 auto;">
     <style>
-      
         body {
             background-image: url('fondoinicio.jpg');
             background-size: cover;
@@ -25,31 +16,45 @@
             text-align: center;
         }
 
-    
         header {
-            padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline-block;
             margin: 0 15px;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: white;
             font-size: 18px;
-            padding: 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            display: inline-block;
+            transition: 0.3s;
         }
 
-       
+        nav ul li:nth-child(odd) a {
+            background-color: blue;
+        }
+
+        nav ul li:nth-child(even) a {
+            background-color: red;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+
         main {
             background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
@@ -66,37 +71,20 @@
             max-width: 100%;
             height: auto;
         }
-
-     
-        @media (max-width: 600px) {
-            nav ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav ul li {
-                margin: 10px 0;
-            }
-
-            nav ul li a {
-                font-size: 16px;
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-
-            main {
-                padding: 15px;
-            }
-        }
     </style>
 </head>
 <body>
 
     <header>
-    
-        
+        <img src="tica.jpg" width="300" height="188" style="display: block; margin: 0 auto;">
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="compras.html">Compra en Línea</a></li>
+                <li><a href="contacto.html">Contáctanos</a></li>
+                <li><a href="historia.html">Historia</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -112,3 +100,6 @@
             <img src="tarjetas.jpeg" width="300" height="188">
         </center>
     </main>
+
+</body>
+</html>
