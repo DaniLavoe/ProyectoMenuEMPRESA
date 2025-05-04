@@ -43,7 +43,6 @@
             transition: 0.3s;
         }
 
-        /* Alternando colores */
         nav ul li:nth-child(odd) a {
             background-color: blue;
         }
@@ -52,7 +51,6 @@
             background-color: red;
         }
 
-        /* Efecto hover */
         nav ul li a:hover {
             opacity: 0.8;
         }
@@ -87,6 +85,11 @@
         button:hover {
             opacity: 0.8;
         }
+
+        .back-button {
+            background-color: blue;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -112,7 +115,6 @@
             <option value="san_salvador">San Salvador</option>
             <option value="managua">Managua</option>
             <option value="san_jose">San José</option>
-            <option value="chiapas">Chiapas</option>
         </select>
 
         <label for="destino">Destino:</label>
@@ -121,7 +123,6 @@
             <option value="managua">Managua</option>
             <option value="san_jose">San José</option>
             <option value="panama">Panamá</option>
-            <option value="chiapas">Chiapas</option>
         </select>
 
         <label for="fecha">Fecha de viaje:</label>
@@ -131,6 +132,8 @@
         <input type="number" id="cantidad" name="cantidad" min="1" max="10">
 
         <button type="button" onclick="window.open('boleto.jpeg', '_self')">Comprar Ahora</button>
+        <button type="button" class="back-button" onclick="window.location.href='inicio.html'">Regresar al Inicio</button>
+
     </main>
 
 </body>
