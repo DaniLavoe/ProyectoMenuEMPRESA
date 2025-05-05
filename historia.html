@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Información General</title>
+    <title>Historia de Tica Bus</title>
     <style>
         body {
             background-image: url('fondoinicio.jpg');
@@ -14,11 +14,14 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            color: white;
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.7);
+            background: linear-gradient(to right, red, white, blue);
             padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-bottom: 4px solid white;
         }
 
         nav ul {
@@ -36,14 +39,16 @@
         nav ul li a {
             text-decoration: none;
             font-size: 18px;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 24px;
+            border-radius: 10px;
             color: white;
             display: inline-block;
-            transition: 0.3s;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid white;
         }
 
-        /* Alternando colores */
         nav ul li:nth-child(odd) a {
             background-color: blue;
         }
@@ -52,33 +57,55 @@
             background-color: red;
         }
 
-        /* Efecto hover */
         nav ul li a:hover {
             opacity: 0.8;
+            transform: scale(1.1);
+            border-color: yellow;
         }
 
         main {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
             margin: 50px auto;
             max-width: 90%;
             border-radius: 10px;
+            color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: left;
         }
 
-        h1 {
-            color: #333;
+        h1, h2 {
+            text-align: center;
+            color: #222;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 15px 20px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
         }
 
         img {
-            max-width: 100%;
-            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 5px solid white;
+            border-radius: 10px;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="tica.jpg" width="300" height="188" style="display: block; margin: 0 auto;">
+        <img src="tica.jpg" width="300" height="188">
         <nav>
             <ul>
                 <li><a href="inicio.html">Inicio</a></li>
@@ -91,7 +118,21 @@
 
     <main>
         <h1>Historia de los Transportes Internacionales Contreras Asociados "Tica Bus"</h1>
-        <p><p>Tica Bus es una empresa de transporte terrestre que ha sido fundamental en la conexión de Centroamérica desde su fundación en 1963. Comenzó como un negocio familiar por la familia Contreras (Guatemaltecos) y la familia Salazar (Costarricenses) y con el tiempo, se consolidó como líder en el transporte internacional en la región. En 1975, logró el control completo del transporte internacional en la zona, expandiendo sus rutas y mejorando sus servicios. Sin embargo, en los años 80, la empresa enfrentó dificultades debido a los conflictos políticos en Centroamérica, lo que la obligó a reducir sus operaciones y limitarse a la ruta Costa Rica - Panamá. Tras una crisis de aproximadamente 8 años, Tica Bus logró reabrir rutas y expandir nuevamente su cobertura a toda Centroamérica. Hoy en día, la empresa sigue invirtiendo en equipos y terminales para mejorar la experiencia de sus pasajeros, conectando ciudades en Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica y Panamá. Su misión es ofrecer un servicio de alta calidad, seguro y cómodo, permitiendo a los viajeros moverse sin problemas a través de las fronteras.</p>
+        
+        <p>Tica Bus es una empresa de transporte terrestre que ha sido fundamental en la conexión de Centroamérica desde su fundación en 1963.</p>
+
+        <p>Comenzó como un negocio familiar por la familia Contreras (Guatemaltecos) y la familia Salazar (Costarricenses) y con el tiempo, se consolidó como líder en el transporte internacional en la región. En 1975, logró el control completo del transporte internacional en la zona, expandiendo sus rutas y mejorando sus servicios.</p>
+
+        <p>Sin embargo, en los años 80, la empresa enfrentó dificultades debido a los conflictos políticos en Centroamérica, lo que la obligó a reducir sus operaciones y limitarse a la ruta Costa Rica - Panamá. Tras una crisis de aproximadamente 8 años, Tica Bus logró reabrir rutas y expandir nuevamente su cobertura a toda Centroamérica.</p>
+
+        <h2>Expansión y modernización</h2>
+        <p>Con el paso de los años, la empresa ha invertido en tecnología y modernización de su flota, adquiriendo autobuses de última generación con comodidades como Wi-Fi, entretenimiento a bordo y sistemas de seguridad avanzados.</p>
+
+        <p>Además, ha construido terminales estratégicas en varias ciudades, facilitando a los viajeros una experiencia más cómoda y eficiente.</p>
+
+        <h2>Compromiso con la calidad</h2>
+        <p>Hoy en día, Tica Bus sigue apostando por un servicio de calidad, seguro y confiable, conectando ciudades en Guatemala, Honduras, El Salvador, Nicaragua, Costa Rica y Panamá.</p>
+
         <center>
             <img src="tica1.jpg" width="200" height="188">
             <img src="tica11.jpg" width="200" height="188">
@@ -99,6 +140,10 @@
             <img src="tica4.jpeg" width="200" height="500">
         </center>
     </main>
+
+    <footer>
+        © 2025 TICA BUS. Todos los derechos reservados.
+    </footer>
 
 </body>
 </html>
