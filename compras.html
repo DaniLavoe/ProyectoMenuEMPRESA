@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compra de Boletos</title>
+    <title>Compra de Boletos - TICA BUS</title>
     <style>
         body {
             background-image: url('fondoinicio.jpg');
@@ -14,11 +14,14 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            color: white;
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.7);
+            background: linear-gradient(to right, red, white, blue);
             padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border-bottom: 4px solid white;
         }
 
         nav ul {
@@ -36,11 +39,14 @@
         nav ul li a {
             text-decoration: none;
             font-size: 18px;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 24px;
+            border-radius: 10px;
             color: white;
             display: inline-block;
-            transition: 0.3s;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid white;
         }
 
         nav ul li:nth-child(odd) a {
@@ -53,25 +59,30 @@
 
         nav ul li a:hover {
             opacity: 0.8;
+            transform: scale(1.1);
+            border-color: yellow;
         }
 
         main {
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
             margin: 50px auto;
             max-width: 600px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            color: #333;
         }
 
         h2 {
-            color: #333;
+            color: #222;
         }
 
         label, select, input, button {
             display: block;
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             margin: 10px 0;
+            border-radius: 5px;
         }
 
         button {
@@ -79,24 +90,38 @@
             color: white;
             border: none;
             cursor: pointer;
+            font-size: 18px;
             transition: 0.3s;
         }
 
         button:hover {
-            opacity: 0.8;
+            background-color: blue;
+            transform: scale(1.05);
         }
 
-        .back-button {
-            background-color: blue;
-            margin-top: 20px;
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            border: 5px solid white;
+            border-radius: 10px;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="tica.jpg" width="300" height="188" style="display: block; margin: 0 auto;">
-        <h1 style="color: white;">Compra de Boletos TICA BUS</h1>
+        <img src="tica.jpg" width="300" height="188">
+        <h1>Compra de Boletos - TICA BUS</h1>
         <nav>
             <ul>
                 <li><a href="inicio.html">Inicio</a></li>
@@ -111,6 +136,7 @@
         <h2>Selecciona tu viaje</h2>
         <label for="origen">Origen:</label>
         <select id="origen" name="origen">
+            <option value="origen">Seleccione su Origen</option>
             <option value="guatemala">Guatemala</option>
             <option value="san_salvador">San Salvador</option>
             <option value="managua">Managua</option>
@@ -119,6 +145,7 @@
 
         <label for="destino">Destino:</label>
         <select id="destino" name="destino">
+             <option value="destino">Seleccione su Destino</option>
             <option value="san_salvador">San Salvador</option>
             <option value="managua">Managua</option>
             <option value="san_jose">San José</option>
@@ -131,9 +158,12 @@
         <label for="cantidad">Cantidad de boletos:</label>
         <input type="number" id="cantidad" name="cantidad" min="1" max="10">
 
-        <button type="button" onclick="window.open('boleto.jpeg', '_self')">Comprar Ahora</button>
-
+        <button onclick="window.open('boleto.jpeg', '_self')">Comprar Ahora</button>
     </main>
+
+    <footer>
+        © 2025 TICA BUS. Todos los derechos reservados.
+    </footer>
 
 </body>
 </html>
